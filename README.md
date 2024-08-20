@@ -16,13 +16,13 @@ To integrate YandexMapsMobile into your project using SwiftPM do this 👇🏻
 
 - File > Swift Packages > Add Package Dependency
 - Add `https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full.git`
-- Select "Up to Next Major" with "4.5.2"
+- Select "Up to Next Major" with "4.7.0"
 
 or add the following code to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full.git", revision: "4.5.2"),
+    .package(url: "https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full.git", revision: "4.7.0"),
 ],
 ```
 or via [XcodeGen](https://github.com/yonaskolb/XcodeGen) insert into your `project.yml`:
@@ -35,7 +35,7 @@ options:
 packages:
   YandexMapsMobile:
     url: https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full
-    from: 4.5.2
+    from: 4.7.0
 targets:
   YourTarget:
     type: application
