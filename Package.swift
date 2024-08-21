@@ -19,7 +19,7 @@ let package = Package(
         .binaryTarget(
             name: "YandexMapsMobile",
             url: "https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full/releases/download/4.7.0/YandexMapsMobile.xcframework.zip",
-            checksum: "f3a4b4a4370625b5d6b58acc60cb9aecc3a4876100c6b1666584dd54ede1830c"
+            checksum: "2173854f9834b5e1daaee048cdbab5f01cbf670df506941f7396d98c4fd91a57"
         ),
     ]
 )
