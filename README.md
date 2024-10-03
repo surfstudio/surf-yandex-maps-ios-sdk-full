@@ -8,7 +8,7 @@ Yandex mobile maps lite version you can find [here](https://github.com/surfstudi
 
 ## Requirements
 
-- iOS 12.0
+- iOS 13.0
 
 ## Swift Package Manager
 
@@ -16,13 +16,13 @@ To integrate YandexMapsMobile into your project using SwiftPM do this 👇🏻
 
 - File > Swift Packages > Add Package Dependency
 - Add `https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full.git`
-- Select "Up to Next Major" with "4.7.0"
+- Select "Up to Next Major" with "4.8.0"
 
 or add the following code to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full.git", revision: "4.7.0"),
+    .package(url: "https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full.git", revision: "4.8.0"),
 ],
 ```
 or via [XcodeGen](https://github.com/yonaskolb/XcodeGen) insert into your `project.yml`:
@@ -31,11 +31,11 @@ or via [XcodeGen](https://github.com/yonaskolb/XcodeGen) insert into your `proje
 name: YourProjectName
 options:
   deploymentTarget:
-    iOS: 12.0
+    iOS: 13.0
 packages:
   YandexMapsMobile:
     url: https://github.com/surfstudio/surf-yandex-maps-ios-sdk-full
-    from: 4.7.0
+    from: 4.8.0
 targets:
   YourTarget:
     type: application
@@ -116,12 +116,14 @@ targets: [
     .target(
         name: "Your target",
         dependencies: [
-            .product(name: "YandexMapsMobile", package: "surf-yandex-maps-ios-sdk")
+            .product(name: "YandexMapsMobile", package: "surf-yandex-maps-ios-sdk-full")
         ],
         linkerSettings: [ // <===== ‼️LOOK HERE‼️
             .linkedFramework("CoreLocation"),
             .linkedFramework("CoreTelephony"),
             .linkedFramework("SystemConfiguration"),
+            .linkedFramework("CoreMotion"),
+            .linkedFramework("DeviceCheck"),
             .linkedLibrary("c++"),
             .unsafeFlags(["-ObjC"]),
         ]),
